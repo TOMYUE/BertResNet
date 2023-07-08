@@ -18,11 +18,15 @@ In the forward pass, the model first encodes the text and image inputs using the
 
 ## Usage
 
-Prerequisites: `python` 3.8 or later, install all the required pacakages `pip install -r requirements.txt`
+Prerequisites: `python` 3.8 or later, install all the required packages `pip install -r requirements.txt`
 
-Run each code cell to do the classification task.
+Run the model by simply running the `BertResNet.ipynb` notebook, which includes the dataset preprocess,
+model training, model validation, and model testing. Run each code cell to see the whole process.
+All the data is stored in the `data` directory, which has two separate subdirectory stores img and sentence.
+I have preprocessed the training data metadata into the `train.csv`, `val.csv`, `test.csv` to make the life of 
+processing the dataset more feel at ease, just reading the csv is all you need. 
 
-You can input only text, image, or both text and image in the `BertResNet` model, as the code below:
+In the model, you can input only text, image, or both text and image in the `BertResNet` model, as the code below:
 
 - Text:![image-20230708210401179](./README.assets/image-20230708210401179.png)
 
@@ -75,7 +79,7 @@ class BertResNetModel(nn.Module):
         return logits
 ```
 
-Or you could try attetion methods:
+Or you could try **attention** methods:
 
 ```python
 import torch.nn.functional as F
