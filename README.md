@@ -16,6 +16,23 @@ In the forward pass, the model first encodes the text and image inputs using the
 
 
 
+## File structure
+
+```bash
+BertResNet
+├── BertResNet.ipynb (=> source code notebook)
+├── README.md
+├── requirements.txt (requires packages)
+├── results					 (result prediction store path) 
+├── test.csv				 (test dataset metadata csv file)
+├── train.csv        (train dataset metadata csv file)
+└── val.csv          (val dataset metadata csv file)
+```
+
+Open and run the `BertResNet.ipynb` is all you need, when clone to your local file system, ⚠️be careful with the path if the 4th code cell returns error message
+
+
+
 ## Usage
 
 Prerequisites: `python` 3.8 or later, install all the required packages `pip install -r requirements.txt`
@@ -38,9 +55,9 @@ In the model, you can input only text, image, or both text and image in the `Ber
 
 
 
-## Main structure
+## Main structure of Model
 
-You could change the BertResNetModel to test multiple fusion methods, just replace the `BertResNetModel` in the code cell, like **CNN** as below:
+You could change the BertResNetModel to test multiple fusion methods, just replace the `BertResNetModel` in the code cell, like **CNN** as below:![image-20230708234402470](./README.assets/image-20230708234402470.png)
 
 ```python
 class BertResNetModel(nn.Module):
@@ -79,7 +96,7 @@ class BertResNetModel(nn.Module):
         return logits
 ```
 
-Or you could try **attention** methods:
+Or you could try **attention** methods:![image-20230708234410446](./README.assets/image-20230708234410446.png)
 
 ```python
 import torch.nn.functional as F
