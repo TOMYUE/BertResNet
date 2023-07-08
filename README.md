@@ -24,7 +24,7 @@ Run the model by simply running the `BertResNet.ipynb` notebook, which includes 
 model training, model validation, and model testing. Run each code cell to see the whole process.
 All the data is stored in the `data` directory, which has two separate subdirectory stores img and sentence.
 I have preprocessed the training data metadata into the `train.csv`, `val.csv`, `test.csv` to make the life of 
-processing the dataset more feel at ease, just reading the csv is all you need. 
+processing the dataset more feel at ease, just read in the csv is all you need. 
 
 In the model, you can input only text, image, or both text and image in the `BertResNet` model, as the code below:
 
